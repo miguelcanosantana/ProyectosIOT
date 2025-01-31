@@ -1,9 +1,20 @@
-void setup() {
-  // put your setup code here, to run once:
+#define LED 2
+#define BUTTON 13
 
+void setup() {
+  pinMode (LED, OUTPUT);
+  pinMode (BUTTON, INPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == LOW) {
+    digitalWrite(LED, HIGH);
+  } else {
+    digitalWrite(LED, LOW);
+  }
+
+  delay(50);
 }
