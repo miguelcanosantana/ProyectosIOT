@@ -4,16 +4,16 @@ byte ledPins[] = {15, 2, 0, 4, 5, 18, 19, 21, 22, 23};
 int ledCounts;
 
 //Music notes
-const int C4 = 261;
-const int D4 = 294;
-const int E4 = 329;
-const int F4 = 349;
-const int G4 = 391;
-const int A4 = 440;
-const int B4 = 493;
-const int C5 = 523;
+const int nC4 = 261;
+const int nD4 = 294;
+const int nE4 = 329;
+const int nF4 = 349;
+const int nG4 = 391;
+const int nA4 = 440;
+const int nB4 = 493;
+const int nC5 = 523;
 
-int melody[] = {C4, D4, E4, F4, G4, A4, B4, C5};
+int melody[] = {nC4, nD4, nE4, nF4, nG4, nA4, nB4, nC5};
 int currentMelodyPosition = 0; 
 
 void setup() {
@@ -32,7 +32,7 @@ void loop() {
       int variation = 20 + i * 30;
 
       digitalWrite(ledPins[i], HIGH);
-      increasePlayMelody()
+      increasePlayMelody();
 
       delay(variation);
       
@@ -45,7 +45,7 @@ void loop() {
       int variation = 20 + i * 30;
       
       digitalWrite(ledPins[i], HIGH);
-      increasePlayMelody()
+      increasePlayMelody();
 
       delay(variation);
 
